@@ -3,7 +3,9 @@ from psycopg2.extras import RealDictCursor
 from datetime import datetime
 import logging
 import os
+import dotenv
 
+dotenv.load_dotenv()
 logger = logging.getLogger(__name__)
 
 
