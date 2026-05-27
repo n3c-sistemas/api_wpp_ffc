@@ -26,6 +26,10 @@ class WppApi:
         # Register routes
         self.app.add_url_rule('/webhook', 'verify_webhook', self.verify_webhook, methods=['GET'])
         self.app.add_url_rule('/webhook', 'handle_message', self.handle_message, methods=['POST'])
+        self.app.add_url_rule('/hello', 'hello', self.hello, methods=['GET'])
+
+    def hello(self):
+        return jsonify({'message': 'Hello, world! API disponível'}), 200
 
     def verify_webhook(self):
         mode = request.args.get('hub.mode')
