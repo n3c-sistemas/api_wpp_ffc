@@ -127,5 +127,5 @@ class WppApi:
             logger.error(f"❌ Exceção: {str(e)}")
             return {'error': str(e)}
 
-    def run(self, debug=True, port=5000):
+    def run(self, debug=True, port=5001):
         self.app.run(debug=debug, port=port)

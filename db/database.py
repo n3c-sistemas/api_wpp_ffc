@@ -49,8 +49,8 @@ class Database:
                     nome VARCHAR(255) NOT NULL,
                     whatsapp VARCHAR(20) NOT NULL,
                     email VARCHAR(255),
-                    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                    data_cadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
                 )
             ''')
 
