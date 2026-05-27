@@ -9,11 +9,11 @@ logger = logging.getLogger(__name__)
 
 class Database:
     def __init__(self):
-        self.db_host = os.getenv('DB_HOST', 'localhost')
-        self.db_port = os.getenv('DB_PORT', '5432')
-        self.db_name = os.getenv('DB_NAME', 'cunha_ffc')
-        self.db_user = os.getenv('DB_USER', 'postgres')
-        self.db_password = os.getenv('DB_PASSWORD', 'postgres')
+        self.db_host = os.getenv('DB_HOST')
+        self.db_port = os.getenv('DB_PORT')
+        self.db_name = os.getenv('DB_NAME')
+        self.db_user = os.getenv('DB_USER')
+        self.db_password = os.getenv('DB_PASSWORD')
         self.init_database()
 
     def get_connection(self):
